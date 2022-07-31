@@ -1,3 +1,22 @@
+body {
+    background-color: black;
+}
+
+h2 {
+    font-size: 2em;
+    color: #808080;
+}
+
+.section-title {
+    margin-bottom: 25px;
+}
+
+.container {
+    margin: 0 auto 80px;
+    text-align: center;
+}
+
+/* spotify player */
 .spotify-selector {
     margin: auto;
     max-width: 500px;
@@ -13,7 +32,7 @@
     object-position: center;
     width: 80%;
     height: 80%;
-    opacity: 0.6;
+    opacity: 0.4;
 }
 
 .spotify-selector-img.clickable:not(.selected):hover {
@@ -32,4 +51,21 @@
 .spotify-player {
     margin: auto;
     width: 300px;
+    height: 400px;
+}
+
+/* bandsintown widget */
+.bit-follow-button {
+    margin: 0 auto;
+    text-align: center;
+}
+.bit-follow-button-iframe {
+    display: block;
+    margin: 0 auto;
+    border:none;
+    overflow:hidden;
+}
+
+.bit-widget {
+    text-align:left;
 }

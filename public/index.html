@@ -40,6 +40,9 @@
     </head>
     <body>
         <div class="container">
+            <div class="section-title">
+                <h2>MUSIC</h2>
+            </div>
             <div class=spotify-selector>
                 <div class="row align-items-center spotify-selector-row">
                     <div class="col-4">
@@ -57,6 +60,33 @@
                 <iframe id="spotify-iframe" src='https://open.spotify.com/embed/album/4LSzNFgbjBP8To1uIe6R12' width="300" height="380" frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>
             </div>
         </div>
+
+        <div class="container">
+            <div class="section-title">
+                <h2>TOUR DATES</h2>
+            </div>
+            <div class="bit-follow-button">
+                <iframe class="bit-follow-button-iframe" src="https://www.bandsintown.com/artist/Dr.X/track_button?size=large&display_tracker_count=true&text_color=%23FFFFFF&background_color=%2300B4B3&hover_color=%2300908f" height="32" width="165" scrolling="no" frameborder="0" allowtransparency="true" ></iframe>
+            </div>
+            <div class="bit-widget">
+                <a class="bit-widget-initializer" 
+                    data-artist-name="Dr.X" 
+                    data-display-local-dates="false" 
+                    data-display-past-dates="true" 
+                    data-auto-style="false" 
+                    data-text-color="#FFFFFF" 
+                    data-link-color="#00b4b3" 
+                    data-background-color="rgba(0,0,0,0)" 
+                    data-display-limit="15" 
+                    data-display-start-time="false" 
+                    data-link-text-color="#FFFFFF" 
+                    data-display-lineup="false" 
+                    data-display-play-my-city="true" 
+                    data-separator-color="rgba(124,124,124,0.25)">
+                </a>
+            </div>
+        </div>
+
         <!-- Scripts -->
         <!-- jQuery CDN -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
@@ -72,6 +102,8 @@
         <script>if(typeof($.fn.modal) === 'undefined') {document.write('<script src="js\bootstrap.min.js"><\/script>')};</script>
         <!-- Scripts -->
         <script src="js/scripts.js"></script>
+        <!--<script charset="utf-8" src="https://widgetv3.bandsintown.com/main.min.js"></script>-->
+        <script charset="utf-8" src="https://widget.bandsintown.com/main.min.js"></script>
     </body>
 </html>
 
