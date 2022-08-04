@@ -69,3 +69,15 @@ h2 {
 .bit-widget {
     text-align:left;
 }
+
+/* links */
+
+.link-icon {
+    filter: saturate(0%);
+    display: block;
+    margin: 0 auto;
+}
+
+.link-icon:hover {
+    filter: saturate(100%);
+}
