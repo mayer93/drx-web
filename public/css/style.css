@@ -30,16 +30,16 @@ h2 {
 .spotify-selector-img {
     object-fit: cover;
     object-position: center;
-    width: 80%;
-    height: 80%;
+    width: 75%;
+    height: 75%;
     opacity: 0.4;
 }
 
 .spotify-selector-img.clickable:not(.selected):hover {
     position: relative;
-    width: 120%;
-    height: 120%;
-    left: -10%;
+    width: 110%;
+    height: 110%;
+    left: -5%;
 }
 
 .selected {
@@ -52,6 +52,18 @@ h2 {
     margin: auto;
     width: 300px;
     height: 400px;
+}
+
+.spotify-follow {
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    max-width: 150px;
+}
+
+.spotify-follow-img {
+    position: relative;
+    max-width: 150px;
 }
 
 /* bandsintown widget */
@@ -71,6 +83,9 @@ h2 {
 }
 
 /* links */
+.icon-container {
+    margin-top: 20px;
+}
 
 .link-icon {
     filter: saturate(0%);
