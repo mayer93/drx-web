@@ -39,40 +39,68 @@
         <link href="css/style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
+        <!-- MUSIC section -->
         <div class="container">
             <div class="section-title">
                 <h2>MUSIC</h2>
             </div>
+            <!-- Album selector -->
             <div class=spotify-selector>
                 <div class="row align-items-center spotify-selector-row">
                     <div class="col-4">
-                        <img id="true-siberian-icon" class="rounded mx-auto d-block spotify-selector-img clickable selected"src="img/true-siberian-mini.jpg">
+                        <img id="true-siberian-icon" class="rounded mx-auto d-block spotify-selector-img clickable selected"src="img/true-siberian-mini.jpg" alt="True Siberian" title="True Siberian">
                     </div>
                     <div class="col-4">
-                        <img id="reborn-icon" class="rounded mx-auto d-block spotify-selector-img clickable" src="img/reborn-mini.jpg">
+                        <img id="reborn-icon" class="rounded mx-auto d-block spotify-selector-img clickable" src="img/reborn-mini.jpg" alt="Reborn" title="Reborn">
                     </div>
                     <div class="col-4">
-                        <img id="meet-the-doctor-icon" class="rounded mx-auto d-block spotify-selector-img clickable" src="img/meet-the-doctor-mini.jpg">
+                        <img id="meet-the-doctor-icon" class="rounded mx-auto d-block spotify-selector-img clickable" src="img/meet-the-doctor-mini.jpg" alt="Meet the Doctor" title="Meet the Doctor">
                     </div>
                 </div>
             </div>
+            <!-- Link to spotify -->
             <div class="spotify-follow">
                 <a href="https://open.spotify.com/artist/2cSBIJ2U55SeqEUnuo5Mov" target="_blank" rel="noreferrer noopener">
-                    <img class="spotify-follow-img" src="./img/icons/spotify-follow-2.png" alt="Follow on Spotify">
+                    <img class="spotify-follow-img link-icon" src="./img/icons/spotify-follow-2.png" alt="Follow on Spotify">
                 </a>
             </div>
+            <!-- Spotify embed -->
             <div class="spotify-player">
-                <iframe id="spotify-iframe" src='https://open.spotify.com/embed/album/4LSzNFgbjBP8To1uIe6R12' width="300" height="380" frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>
+                <div class="spotify-player-inner">
+                    <iframe class="spotify-iframe" src='https://open.spotify.com/embed/album/4LSzNFgbjBP8To1uIe6R12' width="300" height="380" frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>
+                </div>
+            </div>
+            <!-- Other streaming platform links -->
+            <div class="streaming-links">
+                <h3>Also available at</h3>
+                <div class="row align-items-end">
+                    <div class="col-2 offset-4 col-sm-2 offset-sm-3 icon-container">
+                        <a href="https://music.apple.com/gb/artist/dr-x/1468940883" title="Apple Music" target="_blank" rel="noreferrer noopener">
+                            <img class="link-icon" src="./img/icons/icons8-apple-music-60.png" alt="Apple Music">
+                        </a>
+                    </div>
+                    <div class="col-2 col-sm-2 icon-container">
+                        <a href="https://music.amazon.com/artists/B07Z7DLJ9S/dr-x" title="Amazon Music" target="_blank" rel="noreferrer noopener">
+                            <img class="link-icon" src="./img/icons/icons8-amazon-music-60.png" alt="Amazon Music">
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-5 icon-container">
+                        <h4>...and many more</h4>
+                    </div>
+                </div>
             </div>
         </div>
 
+        <!-- TOUR DATES section -->
         <div class="container">
             <div class="section-title">
                 <h2>TOUR DATES</h2>
             </div>
+            <!-- Bandsintown follow button -->
             <div class="bit-follow-button">
                 <iframe class="bit-follow-button-iframe" src="https://www.bandsintown.com/artist/Dr.X/track_button?size=large&display_tracker_count=true&text_color=%23FFFFFF&background_color=%2300B4B3&hover_color=%2300908f" height="32" width="165" scrolling="no" frameborder="0" allowtransparency="true" ></iframe>
             </div>
+            <!-- Bandsintown embed -->
             <div class="bit-widget">
                 <a class="bit-widget-initializer" 
                     data-artist-name="Dr.X" 
@@ -92,34 +120,36 @@
             </div>
         </div>
 
+        <!-- Social media links section-->
         <div class="container">
             <div class="section-title">
                 <h2>FOLLOW US</h2>
             </div>
+            <!-- Icons with links -->
             <div class="row">
                 <div class="col-4 col-md-2 offset-md-1 icon-container">
                     <a href="https://www.facebook.com/drxofficial" target="_blank" rel="noreferrer noopener">
-                        <img class="link-icon" src="./img/icons/icons8-facebook-96.png" alt="Facebook">
+                        <img class="link-icon" src="./img/icons/icons8-facebook-96.png" alt="Facebook" title="Facebook">
                     </a>
                 </div>
                 <div class="col-4 col-md-2 icon-container">
                     <a href="https://www.instagram.com/drx.official/" target="_blank" rel="noreferrer noopener">
-                        <img class="link-icon" src="./img/icons/icons8-instagram-96.png" alt="Instagram">
+                        <img class="link-icon" src="./img/icons/icons8-instagram-96.png" alt="Instagram" title="Instagram">
                     </a>
                 </div>
                 <div class="col-4 col-md-2 icon-container">
                     <a href="https://twitter.com/DrX_Official" target="_blank" rel="noreferrer noopener">
-                        <img class="link-icon" src="./img/icons/icons8-twitter-96.png" alt="Twitter">
+                        <img class="link-icon" src="./img/icons/icons8-twitter-96.png" alt="Twitter" title="Twitter">
                     </a>
                 </div>
                 <div class="col-4 offset-2 col-md-2 offset-md-0 icon-container">
                     <a href="https://www.youtube.com/user/drxbandofficial" target="_blank" rel="noreferrer noopener">
-                        <img class="link-icon" src="./img/icons/icons8-youtube-96.png" alt="Youtube">
+                        <img class="link-icon" src="./img/icons/icons8-youtube-96.png" alt="Youtube" title="Youtube">
                     </a>
                 </div>
                 <div class="col-4 col-md-2 icon-container">
                     <a href="https://drxofficial.bandcamp.com/" target="_blank" rel="noreferrer noopener">
-                        <img class="link-icon" src="./img/icons/icons8-bandcamp-96.png" alt="Bandcamp">
+                        <img class="link-icon" src="./img/icons/icons8-bandcamp-96.png" alt="Bandcamp" title="Bandcamp">
                     </a>
                 </div>
             </div>
