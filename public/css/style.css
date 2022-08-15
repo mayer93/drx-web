@@ -7,13 +7,53 @@ h2 {
     color: #808080;
 }
 
+a {
+    text-decoration: none;
+}
+
+.section-title-middle p {
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    font-weight: bold;
+}
+
 .section-title {
     margin-bottom: 25px;
+}
+
+.section-title-middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1e9ebe;
+    height: 50px;
+    width: 200px;
+}
+
+.section-title-middle:hover {
+    background-color: #155f72;
 }
 
 .container {
     margin: 0 auto 80px;
     text-align: center;
+    position: relative;
+}
+
+.background-wrapper {
+    position: relative;
+    margin-bottom: 80px;
+    background-color: transparent;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* spotify player */
@@ -93,6 +133,17 @@ h2 {
 
 .bit-widget {
     text-align:left;
+}
+
+/* merch */
+.bgmerch {
+    background-image: url(../img/merch-background-3.jpg);
+    height: 350px;
+    opacity: 0.9;
+}
+
+#merch-section-cont {
+    height: 350px;
 }
 
 /* links */
