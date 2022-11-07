@@ -42,3 +42,29 @@ $(document).on("click", ".spotify-selector-img:not(.selected)", function() {
         /*$('.spotify-player').append(elementStr);*/
     }
 })
+
+// parallax
+window.addEventListener('scroll', function() {
+    var bgParallaxList = document.getElementsByClassName('parallax');
+    for (var i = 0; i < bgParallaxList.length; i++) {
+        var bgParallax = bgParallaxList.item(i);
+        bgParallax.style.backgroundPositionY = calculateBackgroundPositionY(bgParallax);
+    }
+ });
+
+function calculateBackgroundPositionY(elem) {
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+    var docViewCenter = (docViewTop + docViewBottom) / 2;
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+    var elemCenter = (elemTop + elemBottom) / 2;
+
+    if ((elemBottom >= docViewTop) && (elemTop <= docViewBottom)) {
+        return (50 + 0.06 * (elemCenter - docViewCenter)) + '%';
+    }
+    else {
+        return '50%';
+    }
+}

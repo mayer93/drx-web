@@ -1,10 +1,44 @@
+@font-face {
+    font-family: 'CharmingSmile';
+    src:  url('../fonts/Charming-Smile-DEMO.woff2') format('woff2'),
+          url('../fonts/Charming-Smile-DEMO.woff') format('woff'),
+          url('../fonts/Charming-Smile-DEMO.ttf')  format('truetype');
+}
+
 body {
-    background-color: #505050;
+    /*background-color: #030303;*/
+    background-image: linear-gradient(to right, #202020, #000000, #202020);
+    background-size: 150% 100%;
+    background-position: center;
+    margin: 0;
+}
+
+main {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 2px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: #f9f9f9;
 }
 
 h2 {
     font-size: 2em;
-    color: #808080;
+}
+
+p.bold {
+    font-weight: bold;
+}
+
+p.small {
+    font-size: 0.85em;
+}
+
+p.highlight-text {
+    font-family: CharmingSmile;
+    font-size: 3em;
 }
 
 a {
@@ -12,13 +46,11 @@ a {
 }
 
 .section-title-middle p {
-    color: #ffffff;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     min-width: 100%;
-    font-weight: bold;
 }
 
 .section-title {
@@ -40,23 +72,67 @@ a {
 }
 
 .container {
-    margin: 0 auto 80px;
+    margin: 0 auto;
+    padding: 40px 0;
     text-align: center;
     position: relative;
+    opacity: 1;
 }
 
-.background-wrapper {
+.bg-wrapper {
     position: relative;
-    margin-bottom: 80px;
+    height: 100%;
+    margin-bottom: 40px;
     background-color: transparent;
-    opacity: 0.65;
-    background-attachment: fixed;
-    background-position: center;
+    /*background-attachment: fixed;*/
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
 }
 
+
+
+/* header */
+.bg-header {
+    background-image: url(../img/header-background.jpg);
+    height: 100vh;
+    margin-bottom: 0px;
+}
+
+#header-section-cont {
+    height: 100vh;
+}
+
+.logo {
+    width: 100%;
+    max-width: 1080px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#drx-logo {
+    width: 100%;
+}
+
+/* highlights */
+#highlight-section-cont {
+    min-height: 350px;
+}
+
+.highlight-img-cont {
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
 /* spotify player */
+.bg-music {
+    background-image: url(../img/music-background-3.jpg);
+    padding-top: 40px
+}
+
 .spotify-selector {
     margin: auto;
     max-width: 500px;
@@ -119,6 +195,17 @@ a {
     max-width: 500px;
 }
 
+.color-link-icon {
+    /*filter: saturate(0%);*/
+    display: block;
+    margin: 0 auto;
+}
+
+.color-link-icon:hover {
+    /*filter: saturate(100%);*/
+    filter: brightness(60%);
+}
+
 /* bandsintown widget */
 .bit-follow-button {
     margin: 0 auto;
@@ -135,29 +222,45 @@ a {
     text-align:left;
 }
 
-/* merch */
-.bgmerch {
-    background-image: url(../img/merch-background-3.jpg);
-    height: 350px;
-    opacity: 0.9;
+/* store */
+.bg-merch {
+    background-image: url(../img/merch-background.jpg);
 }
 
 #merch-section-cont {
-    height: 350px;
+    height: 420px;
 }
 
 /* links */
 .icon-container {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .link-icon {
-    /*filter: saturate(0%);*/
+    filter: saturate(0%);
     display: block;
     margin: 0 auto;
 }
 
 .link-icon:hover {
-    /*filter: saturate(100%);*/
-    filter: brightness(60%);
+    filter: saturate(100%);
+    /*filter: brightness(60%);*/
+}
+
+.mail-icon {
+    margin: 30px 0 20px;
+}
+
+/* band pics & footer */
+.band-pics-cont {
+    margin: 0 10px;
+}
+
+.band-pic {
+    width: 105%;
+    transform: translateX(-2.5%)
+}
+
+.footer {
+    margin-top: 350px;
 }
