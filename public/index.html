@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
         <title>Dr.X | Official website</title>
+        <link rel="icon" href="./img/drx-logo-icon.png">
         <meta name="description" content="Dr.X official website. Progresive Rock & Heavy Metal from Barcelona, Spain.">
         <meta property="og:title" content="Dr.X | Official website">
         <meta property="og:description" content="Progresive Rock & Heavy Metal from Barcelona, Spain">
@@ -39,36 +40,39 @@
         <link href="css/style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <main>
-            <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg" style="background-color: #00e1ff00;">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Dr.X</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#header">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#music">Music</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#tour-dates">Tour dates</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#store">Store</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#links">Follow us</a>
-                            </li>
-                        </ul>
-                    </div>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-md fixed-top autohide on-top py-0">
+            <div class="container-fluid">
+                <a class="navbar-brand mx-1 mx-md-2 mx-lg-3" href="#">
+                    <img src="./img/drx-logo-icon.png" alt="Dr.X" width="60">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-md-0">
+                        <!--<li class="nav-item mx-lg-3">
+                            <a class="nav-link active" aria-current="page" href="#header">Home</a>
+                        </li>-->
+                        <li class="nav-item mx-md-3 mx-lg-5">
+                            <a class="nav-link" href="#music">Music</a>
+                        </li>
+                        <li class="nav-item mx-md-3 mx-lg-5">
+                            <a class="nav-link" href="#tour-dates">Tour dates</a>
+                        </li>
+                        <li class="nav-item mx-md-3 mx-lg-5">
+                            <a class="nav-link" href="#store">Store</a>
+                        </li>
+                        <li class="nav-item mx-md-3 mx-lg-5">
+                            <a class="nav-link" href="#links">Follow us</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
+            </div>
+        </nav>
 
+        <main>
+            <!-- HEADER section-->
             <section id="header" class="bg-wrapper bg-header parallax">
                 <div class="container" id="header-section-cont">
                     <div class="logo">
@@ -109,7 +113,7 @@
                     <div class=spotify-selector>
                         <div class="row align-items-center spotify-selector-row">
                             <div class="col-4">
-                                <img id="true-siberian-icon" class="rounded mx-auto d-block spotify-selector-img clickable selected"src="img/true-siberian-mini.jpg" alt="True Siberian" title="True Siberian">
+                                <img id="masa-icon" class="rounded mx-auto d-block spotify-selector-img clickable selected"src="img/masa-mini.jpg" alt="Music As Soul Assistance" title="Music As Soul Assistance">
                             </div>
                             <div class="col-4">
                                 <img id="reborn-icon" class="rounded mx-auto d-block spotify-selector-img clickable" src="img/reborn-mini.jpg" alt="Reborn" title="Reborn">
@@ -128,12 +132,12 @@
                     <!-- Spotify embed -->
                     <div class="spotify-player">
                         <div class="spotify-player-inner">
-                            <iframe src='https://open.spotify.com/embed/album/4LSzNFgbjBP8To1uIe6R12' width="300" height="380" frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>
+                            <iframe src='https://open.spotify.com/embed/album/3IT4zdyKrgWqvPKLjGTEiA' width="300" height="380" frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>
                         </div>
                     </div>
                     <!-- Other streaming platform links -->
                     <div class="streaming-links">
-                        <h5>Also available at</h5>
+                        <h4>Also available at</h4>
                         <div class="row align-items-end">
                             <div class="col-2 offset-4 col-sm-2 offset-sm-3 icon-container">
                                 <a href="https://music.apple.com/gb/artist/dr-x/1468940883" title="Apple Music" target="_blank" rel="noreferrer noopener">
@@ -146,7 +150,7 @@
                                 </a>
                             </div>
                             <div class="col-12 col-sm-5 icon-container">
-                                <p class="bold">& many more</p>
+                                <h5>& many more</h5>
                             </div>
                         </div>
                     </div>
@@ -178,7 +182,8 @@
                             data-link-text-color="#FFFFFF" 
                             data-display-lineup="false" 
                             data-display-play-my-city="true" 
-                            data-separator-color="rgba(124,124,124,0.25)">
+                            data-separator-color="rgba(124,124,124,0.25)"
+                            data-font="Overlock">
                         </a>
                     </div>
                 </div>
@@ -189,7 +194,7 @@
                 <div class="container" id="merch-section-cont">
                     <a href="https://drxofficial.bandcamp.com/merch" target="_blank" rel="noreferrer noopener">
                         <div class="section-title-middle">
-                            <p class="bold">VISIT OUR STORE</p>
+                            <h4>VISIT OUR STORE</h4>
                         </div>
                     </a>
                 </div>

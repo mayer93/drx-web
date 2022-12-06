@@ -5,6 +5,20 @@
           url('../fonts/Charming-Smile-DEMO.ttf')  format('truetype');
 }
 
+@font-face {
+    font-family: 'PassionOne';
+    src: url('../fonts/PassionOne-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Overlock';
+    src: url('../fonts/Overlock-Regular.ttf') format('truetype');
+}
+
+.navbar-toggler-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
 body {
     /*background-color: #030303;*/
     background-image: linear-gradient(to right, #202020, #000000, #202020);
@@ -22,6 +36,14 @@ main {
 
 h1, h2, h3, h4, h5, h6, p {
     color: #f9f9f9;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: PassionOne;
+}
+
+p {
+    font-family: Overlock;
 }
 
 h2 {
@@ -45,7 +67,7 @@ a {
     text-decoration: none;
 }
 
-.section-title-middle p {
+.section-title-middle * {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -90,7 +112,30 @@ a {
     background-size: cover;
 }
 
+/* navbar */
+.nav-link {
+    color: #ffd45e;
+    font-family: CharmingSmile;
+    font-size: 1.35em;
+}
 
+.scrolled-down{
+    transform:translateY(-100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.scrolled-up{
+    transform:translateY(0);
+    transition: all 0.3s ease-in-out;
+}
+
+nav.autohide {
+    background-color: #6d3908f0;
+}
+
+nav.on-top {
+    background-color: #5c2f0600;
+}
 
 /* header */
 .bg-header {
