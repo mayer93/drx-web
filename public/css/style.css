@@ -106,7 +106,6 @@ a {
     height: 100%;
     margin-bottom: 40px;
     background-color: transparent;
-    /*background-attachment: fixed;*/
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -174,7 +173,7 @@ nav.on-top {
 
 /* spotify player */
 .bg-music {
-    background-image: url(../img/music-background-3.jpg);
+    background-image: url(../img/music-background.jpg);
     padding-top: 40px
 }
 
@@ -294,6 +293,7 @@ nav.on-top {
 
 .mail-icon {
     margin: 30px 0 20px;
+    padding-top: 30px
 }
 
 /* band pics & footer */
@@ -308,4 +308,79 @@ nav.on-top {
 
 .footer {
     margin-top: 350px;
+}
+
+
+/* scroll animations */
+.animated {
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+.animated.scrolled {
+    opacity: 1;
+}
+
+.animated.scrolled.slide-right {
+    animation: slide-in-right 1s ease-in-out both;
+}
+
+.animated.scrolled.slide-left {
+    animation: slide-in-left 1s ease-in-out both;
+}
+
+.animated.scrolled.fade-in {
+  animation: fade-in 1s ease-in-out both;
+}
+
+.animated.scrolled.fade-in-bottom {
+  animation: fade-in-bottom 1s ease-in-out both;
+}
+  
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(200px);
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-200px);
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+@keyframes fade-in-bottom {
+    0% {
+      -webkit-transform: translateY(75px);
+      transform: translateY(75px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+    }
 }

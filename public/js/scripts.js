@@ -48,54 +48,56 @@ $(document).on("click", ".spotify-selector-img:not(.selected)", function() {
     }
 })
 
-// parallax & navbar autohide
+// parallax
 window.addEventListener('scroll', function() {
     var bgParallaxList = document.getElementsByClassName('parallax');
     for (var i = 0; i < bgParallaxList.length; i++) {
         var bgParallax = bgParallaxList.item(i);
         bgParallax.style.backgroundPositionY = calculateBackgroundPositionY(bgParallax);
     }
-    /*currentScroll = $(window).scrollTop();
-    autohideNavbar(preScroll, currentScroll);
-    preScroll = currentScroll;*/
  });
 
 function calculateBackgroundPositionY(elem) {
-    var docViewTop = $(window).scrollTop();
-    var docViewBottom = docViewTop + $(window).height();
-    var docViewCenter = (docViewTop + docViewBottom) / 2;
-
-    var elemTop = $(elem).offset().top;
-    var elemBottom = elemTop + $(elem).height();
-    var elemCenter = (elemTop + elemBottom) / 2;
-
-    if ((elemBottom >= docViewTop) && (elemTop <= docViewBottom)) {
-        return (50 + 0.06 * (elemCenter - docViewCenter)) + '%';
+    if (elementIsOnScreen(elem, false, 0)) {
+        return (50 + 0.06 * (getElementCenter(elem) - getDocviewCenter())) + '%';
     }
     else {
         return '50%';
     }
 }
 
-// navbar autohide
+function getDocviewCenter() {
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+    var docViewCenter = (docViewTop + docViewBottom) / 2;
+    
+    return docViewCenter;
+}
 
-function autohideNavbar(preScroll, currentScroll) {
-    var navbarList = document.getElementsByClassName('navbar-autohide');
-    for (var i = 0; i < navbarList.length; i++) {
-        var navbar = navbarList.item(i);
-        if (currentScroll < preScroll && $(navbar).hasClass('scrolled-down')) {
-            $(navbar).removeClass('scrolled-down');
-            $(navbar).addClass('scrolled-up');
-        }
-        else if (currentScroll > preScroll && $(navbar).hasClass('scrolled-up')) {
-            $(navbar).removeClass('scrolled-up');
-            $(navbar).addClass('scrolled-down');
-        }
-        else {
-            $(navbar).addClass('scrolled-up');
-        }
+function getElementCenter(elem) {
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+    var elemCenter = (elemTop + elemBottom) / 2;
+
+    return elemCenter;
+}
+
+function elementIsOnScreen(elem, above, margin) {
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    if (above) {
+        return (elemTop < docViewBottom - margin);
+    } else {
+        return (elemBottom >= docViewTop) && (elemTop <= docViewBottom);
     }
 }
+
+
+// navbar autohide
 
 document.addEventListener("DOMContentLoaded", function(){
 
@@ -128,4 +130,33 @@ document.addEventListener("DOMContentLoaded", function(){
                 lastScrollTop = scrollTop;
         });
     }
-  })
+})
+
+// scroll animations
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    var animatedElems = document.getElementsByClassName('animated');
+    for (var i = 0; i < animatedElems.length; i++) {
+        var elem = animatedElems.item(i);
+        if (elementIsOnScreen(elem, true, 0)) {
+            $(elem).addClass('scrolled');
+        }
+        else {
+            $(elem).removeClass('scrolled');
+        }
+    }
+
+    window.addEventListener('scroll', function() {
+        for (var i = 0; i < animatedElems.length; i++) {
+            var elem = animatedElems.item(i);
+            if (elementIsOnScreen(elem, true, 250)) {
+                $(elem).addClass('scrolled');
+            }
+            else if (!elementIsOnScreen(elem, true, 0)) {
+                $(elem).removeClass('scrolled');
+            }
+        }
+
+    })
+})
