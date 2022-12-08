@@ -50,12 +50,14 @@ $(document).on("click", ".spotify-selector-img:not(.selected)", function() {
 
 // parallax
 window.addEventListener('scroll', function() {
-    var bgParallaxList = document.getElementsByClassName('parallax');
-    for (var i = 0; i < bgParallaxList.length; i++) {
-        var bgParallax = bgParallaxList.item(i);
-        bgParallax.style.backgroundPositionY = calculateBackgroundPositionY(bgParallax);
+    if ($(window).width >= 576) {
+        var bgParallaxList = document.getElementsByClassName('parallax');
+        for (var i = 0; i < bgParallaxList.length; i++) {
+            var bgParallax = bgParallaxList.item(i);
+            bgParallax.style.backgroundPositionY = calculateBackgroundPositionY(bgParallax);
+        }
     }
- });
+});
 
 function calculateBackgroundPositionY(elem) {
     if (elementIsOnScreen(elem, false, 0)) {
@@ -139,10 +141,10 @@ document.addEventListener("DOMContentLoaded", function() {
     var animatedElems = document.getElementsByClassName('animated');
     for (var i = 0; i < animatedElems.length; i++) {
         var elem = animatedElems.item(i);
-        if (elementIsOnScreen(elem, true, 0)) {
+        if (elementIsOnScreen(elem, true, 0) && !$(elem).hasClass('scrolled')) {
             $(elem).addClass('scrolled');
         }
-        else {
+        else if ($(elem).hasClass('scrolled')) {
             $(elem).removeClass('scrolled');
         }
     }
@@ -150,10 +152,10 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener('scroll', function() {
         for (var i = 0; i < animatedElems.length; i++) {
             var elem = animatedElems.item(i);
-            if (elementIsOnScreen(elem, true, 250)) {
+            if (elementIsOnScreen(elem, true, 250) && !$(elem).hasClass('scrolled')) {
                 $(elem).addClass('scrolled');
             }
-            else if (!elementIsOnScreen(elem, true, 0)) {
+            else if (!elementIsOnScreen(elem, true, 0) && $(elem).hasClass('scrolled')) {
                 $(elem).removeClass('scrolled');
             }
         }
