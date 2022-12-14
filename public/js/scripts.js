@@ -50,7 +50,7 @@ $(document).on("click", ".spotify-selector-img:not(.selected)", function() {
 
 // parallax
 window.addEventListener('scroll', function() {
-    if ($(window).width >= 576) {
+    if ($(window).width() >= 576) {
         var bgParallaxList = document.getElementsByClassName('parallax');
         for (var i = 0; i < bgParallaxList.length; i++) {
             var bgParallax = bgParallaxList.item(i);
